@@ -1,0 +1,800 @@
+{
+	"info": {
+		"_postman_id": "fef09fa6-358f-4f2d-a094-f0cc27630457",
+		"name": "Lab12",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30353165",
+		"_collection_link": "https://www.postman.com/grandplay/workspace/lab12/collection/30353165-fef09fa6-358f-4f2d-a094-f0cc27630457?action=share&source=collection_link&creator=30353165"
+	},
+	"item": [
+		{
+			"name": "Algebraic",
+			"item": [
+				{
+					"name": "Addition",
+					"item": [
+						{
+							"name": "AddInt",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"5.0\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://grandplay05.pythonanywhere.com/add/2/3",
+									"protocol": "https",
+									"host": [
+										"grandplay05",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"add",
+										"2",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AddFloat",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"5.9\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://grandplay05.pythonanywhere.com/add/2.5/3.4",
+									"protocol": "https",
+									"host": [
+										"grandplay05",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"add",
+										"2.5",
+										"3.4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AddToZero",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"0.0\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://grandplay05.pythonanywhere.com/add/-2.5/2.5",
+									"protocol": "https",
+									"host": [
+										"grandplay05",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"add",
+										"-2.5",
+										"2.5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Subtraction",
+					"item": [
+						{
+							"name": "SubInt",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"-1.0\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://grandplay05.pythonanywhere.com/sub/2/3",
+									"protocol": "https",
+									"host": [
+										"grandplay05",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"sub",
+										"2",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SubFloat",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"0.5\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://grandplay05.pythonanywhere.com/sub/2.7/2.2",
+									"protocol": "https",
+									"host": [
+										"grandplay05",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"sub",
+										"2.7",
+										"2.2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SubToZero",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"0.0\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://grandplay05.pythonanywhere.com/sub/2.7/2.7",
+									"protocol": "https",
+									"host": [
+										"grandplay05",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"sub",
+										"2.7",
+										"2.7"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Multiplication",
+					"item": [
+						{
+							"name": "MulInt",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"15.0\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://grandplay05.pythonanywhere.com/mul/3/5",
+									"protocol": "https",
+									"host": [
+										"grandplay05",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"mul",
+										"3",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "MulFloat",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"23.8\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://grandplay05.pythonanywhere.com/mul/3.5/6.8",
+									"protocol": "https",
+									"host": [
+										"grandplay05",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"mul",
+										"3.5",
+										"6.8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "MulToZero",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"0.0\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://grandplay05.pythonanywhere.com/mul/3.5/0",
+									"protocol": "https",
+									"host": [
+										"grandplay05",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"mul",
+										"3.5",
+										"0"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Divide",
+					"item": [
+						{
+							"name": "DivInt",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"5.0\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://grandplay05.pythonanywhere.com/div/25/5",
+									"protocol": "https",
+									"host": [
+										"grandplay05",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"div",
+										"25",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DivFloat",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"2.35483\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://grandplay05.pythonanywhere.com/div/14.6/6.2",
+									"protocol": "https",
+									"host": [
+										"grandplay05",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"div",
+										"14.6",
+										"6.2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DivByZero",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"error\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://grandplay05.pythonanywhere.com/div/14.6/0",
+									"protocol": "https",
+									"host": [
+										"grandplay05",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"div",
+										"14.6",
+										"0"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Power",
+					"item": [
+						{
+							"name": "PowInt",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"8.0\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://grandplay05.pythonanywhere.com/pow/2/3",
+									"protocol": "https",
+									"host": [
+										"grandplay05",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"pow",
+										"2",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PowFloat",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"14.37239\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://grandplay05.pythonanywhere.com/pow/2.3/3.2",
+									"protocol": "https",
+									"host": [
+										"grandplay05",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"pow",
+										"2.3",
+										"3.2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Square",
+					"item": [
+						{
+							"name": "SqrtInt",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"7.0\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://grandplay05.pythonanywhere.com/sqrt/49",
+									"protocol": "https",
+									"host": [
+										"grandplay05",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"sqrt",
+										"49"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SqrtFloat",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"1.58113\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://grandplay05.pythonanywhere.com/sqrt/2.5",
+									"protocol": "https",
+									"host": [
+										"grandplay05",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"sqrt",
+										"2.5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SqrtNegative",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"error\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://grandplay05.pythonanywhere.com/sqrt/-25",
+									"protocol": "https",
+									"host": [
+										"grandplay05",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"sqrt",
+										"-25"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Trigonometric",
+			"item": [
+				{
+					"name": "Sinus",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"-0.95892\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://grandplay05.pythonanywhere.com/sin/5",
+							"protocol": "https",
+							"host": [
+								"grandplay05",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"sin",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cosinus",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"0.28366\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://grandplay05.pythonanywhere.com/cos/5",
+							"protocol": "https",
+							"host": [
+								"grandplay05",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"cos",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tangent",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"-3.38051\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://grandplay05.pythonanywhere.com/tan/5",
+							"protocol": "https",
+							"host": [
+								"grandplay05",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"tan",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TangentNegative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"error\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://grandplay05.pythonanywhere.com/tan/1.5707963267948966",
+							"protocol": "https",
+							"host": [
+								"grandplay05",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"tan",
+								"1.5707963267948966"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
